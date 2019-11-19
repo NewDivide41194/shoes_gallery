@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import BG1 from "../../assets/images/background/bg2.jpg";
+import BG1 from "../../assets/images/background/bg1.jpg";
 import { withMedia } from "react-media-query-hoc";
 
 const Header = props => {
@@ -14,7 +14,13 @@ const Header = props => {
       style={{
         backgroundImage: `url(${BG1})`,
         backgroundPosition: "center",
-        height: media.desktop ? 800 : media.tablet ? 600 :media.mobile?300 :700,
+        height: media.desktop
+          ? 800
+          : media.tablet
+          ? 600
+          : media.mobile
+          ? 300
+          : 700,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%"

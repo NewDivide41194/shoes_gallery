@@ -4,32 +4,31 @@ import { Link } from "react-router-dom";
 import * as Colors from "../config/colorConfig";
 
 const MyLink = props => {
-  const { text, style, className, id, to, noEffect } = props;
+  const { text, style, className, id, to, noEffect, Active } = props;
   const [hover, SetHover] = useState(false);
   const defaultStyle = {
     textDecoration: "none",
     color: Colors.textBlack,
     width: "100%",
-    transition: ".5s"
+    transition: ".5s",
+    borderBottom: Active === undefined ? null : "3px solid gray"
   };
   const userStyle = style === undefined ? {} : style;
   const onHover = () => {
-    SetHover(!hover)
+    SetHover(!hover);
     const LinkID = document.getElementById(id);
     LinkID.style.borderBottom = "3px solid gray";
-
   };
   const onLeave = () => {
-    SetHover(!hover)
+    SetHover(!hover);
 
     const LinkID = document.getElementById(id);
     LinkID.style.borderBottom = "none";
-
   };
-console.log(hover);
+  console.log(hover);
 
   return (
-      <Link
+    <Link
       id={`${id}`}
       className={className}
       style={{ ...defaultStyle, ...userStyle }}
@@ -39,8 +38,6 @@ console.log(hover);
     >
       {text}
     </Link>
-
-    
   );
 };
 

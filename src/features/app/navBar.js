@@ -5,27 +5,27 @@ import { withRouter } from "react-router-dom";
 import MyLink from "../../tools/myLink";
 import * as RoutePath from "../../config/routeConfig";
 import { fsc } from "../../assets/fontControlHelper";
-import * as Colors from '../../config/colorConfig'
+import * as Colors from "../../config/colorConfig";
 
-const NavBar = (props) => {
-  const { media } = props;
-console.log(props.match);
+const NavBar = ({ match, media }) => {
+  // const { media,match } = props;
+  console.log(window.location);
 
   useEffect(() => {
     window.onscroll = () => {
       const MyNav = document.getElementById("nav");
-      
+
       if (
         document.body.scrollTop > 30 ||
         document.documentElement.scrollTop > 30
       ) {
-        MyNav.style.background =Colors.NavBgColor;
-        MyNav.style.boxShadow ='1px 1px 10px gray';
+        MyNav.style.background = Colors.NavBgColor;
+        MyNav.style.color = Colors.textWhite;
 
+        MyNav.style.boxShadow = "1px 1px 10px gray";
       } else {
         MyNav.style.background = "none";
-        MyNav.style.boxShadow ='none';
-
+        MyNav.style.boxShadow = "none";
       }
     };
   });
@@ -33,7 +33,10 @@ console.log(props.match);
   // const PathName=match.history.location.pathname
 
   return (
-    <div className="d-flex flex-row flex-wrap fixed-top justify-content-between py-4" id='nav'>
+    <div
+      className="d-flex flex-row flex-wrap fixed-top justify-content-between py-4"
+      id="nav"
+    >
       <div className="flex-row">
         <MyLink
           to={"/"}
@@ -51,7 +54,6 @@ console.log(props.match);
               className="px-3 py-2"
               id={"Men"}
               text={"Men"}
-              // style={{borderBottom:PathName===`/${RoutePath.Men}`?'1px solid gray':null}}
             />
             <MyLink
               to={`/${RoutePath.Women}`}
@@ -74,9 +76,8 @@ console.log(props.match);
               id={"Contact"}
               text={"Contact Us"}
             />
-          </span>          
+          </span>
         )}
-        
       </div>
       {media.mobile ? (
         <span className="px-4">
@@ -92,15 +93,16 @@ console.log(props.match);
           <div>
             <input
               placeholder="Search Items"
-              className="form-control float-right"
+              className="form-control float-right bg-transparent border"
+              style={{ backgroundColor: "none", boxShadow: "none" }}
             />
 
             <i
-              className="fa fa-search position-absolute"
+              className="fa fa-search position-absolute text-dark"
               style={{
                 marginLeft: 170,
                 marginTop: 10,
-                opacity: 0.2,
+                opacity: 0.5,
                 cursor: "pointer"
               }}
             />
