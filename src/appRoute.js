@@ -13,6 +13,7 @@ import NavBar from "./features/app/navBar";
 import MenGallery from "./features/shop/category/men/container/menContainer";
 import WomenGallery from "./features/shop/category/women/container/womenGallery";
 import CollectionContainer from "./features/shop/category/parmanentCollection/container/CollectionContainer";
+import Footer from "./features/app/footer";
 
 const AppRoute = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoute = () => {
         <Route path={`/${RoutePath.PermanentCollection}`} component={CollectionContainer} />        
         <Redirect to='/' />
       </Switch>
+      <Footer/>
     </Router>
   );
 };

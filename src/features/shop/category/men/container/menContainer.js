@@ -1,9 +1,10 @@
 import React from 'react'
+import MenItemCards from '../components/menCards'
 
 const MenGallery=()=>{
     return(
-        <div>
-            Men
+        <div className='py-5'>
+            <MenItemCards/>
         </div>
     )
 }

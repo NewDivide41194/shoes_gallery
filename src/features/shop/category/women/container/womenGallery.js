@@ -1,9 +1,10 @@
 import React from 'react'
+import WomenItemCards from '../components/womenCards'
 
 const WomenGallery=()=>{
     return(
         <div>
-            Women
+            <WomenItemCards/>
         </div>
     )
 }

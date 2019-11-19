@@ -1,55 +1,114 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { withMedia } from "react-media-query-hoc";
-import {withRouter} from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
 import MyLink from "../../tools/myLink";
 import * as RoutePath from "../../config/routeConfig";
+import { fsc } from "../../assets/fontControlHelper";
+import * as Colors from '../../config/colorConfig'
 
-const NavBar = match => {
-    const PathName=match.history.location.pathname
-    
+const NavBar = (props) => {
+  const { media } = props;
+console.log(props.match);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      const MyNav = document.getElementById("nav");
+      
+      if (
+        document.body.scrollTop > 30 ||
+        document.documentElement.scrollTop > 30
+      ) {
+        MyNav.style.background =Colors.NavBgColor;
+        MyNav.style.boxShadow ='1px 1px 10px gray';
+
+      } else {
+        MyNav.style.background = "none";
+        MyNav.style.boxShadow ='none';
+
+      }
+    };
+  });
+
+  // const PathName=match.history.location.pathname
+
   return (
-    <div className="d-flex flex-row flex-wrap justify-content-between bg-light py-4">
+    <div className="d-flex flex-row flex-wrap fixed-top justify-content-between py-4" id='nav'>
       <div className="flex-row">
         <MyLink
-          to={'/'}
-          className="px-3"
-          style={{ fontSize: 25, fontStyle: "bold" }}
+          to={"/"}
+          className="px-4"
+          style={{ fontSize: fsc(media, 25), fontStyle: "bold" }}
+          id={"Home"}
           text={"E.M.D"}
           noEffect
         />
-        <MyLink
-          to={`/${RoutePath.Men}`}
-          className="px-3 py-2"
-          id={"Men"}
-          text={"Men"}
-          style={{borderBottom:PathName===`/${RoutePath.Men}`?'1px solid gray':null}}
-        />
-        <MyLink
-          to={`/${RoutePath.Women}`}
-          className="px-3 py-2"
-          id={"Women"}
-          text={"Women"}
-        />
-        <MyLink
-          to={`/${RoutePath.PermanentCollection}`}
-          className="px-3 py-2"
-          id={"Collection"}
-          text={"Parmanent Collection"}
-        />
-        <MyLink
-          to={`/${RoutePath.Contact}`}
-          className="px-3 py-2"
-          id={"Contact"}
-          text={"Contact Us"}
-        />
+        {media.mobile || media.tablet || (
+          <span>
+            <MyLink
+              to={`/${RoutePath.Men}`}
+              style={{ fontSize: fsc(media, 18) }}
+              className="px-3 py-2"
+              id={"Men"}
+              text={"Men"}
+              // style={{borderBottom:PathName===`/${RoutePath.Men}`?'1px solid gray':null}}
+            />
+            <MyLink
+              to={`/${RoutePath.Women}`}
+              style={{ fontSize: fsc(media, 18) }}
+              className="px-3 py-2"
+              id={"Women"}
+              text={"Women"}
+            />
+            <MyLink
+              to={`/${RoutePath.PermanentCollection}`}
+              style={{ fontSize: fsc(media, 18) }}
+              className="px-3 py-2"
+              id={"Collection"}
+              text={"Parmanent Collection"}
+            />
+            <MyLink
+              to={`/${RoutePath.Contact}`}
+              style={{ fontSize: fsc(media, 18) }}
+              className="px-3 py-2"
+              id={"Contact"}
+              text={"Contact Us"}
+            />
+          </span>          
+        )}
+        
       </div>
-      <div className='py-2 px-5'>
-          <i className='fa fa'></i>
-          Search
-      </div>
+      {media.mobile ? (
+        <span className="px-4">
+          <i
+            className="fa fa-list"
+            style={{
+              cursor: "pointer"
+            }}
+          />
+        </span>
+      ) : (
+        <span className="py-2 px-4">
+          <div>
+            <input
+              placeholder="Search Items"
+              className="form-control float-right"
+            />
+
+            <i
+              className="fa fa-search position-absolute"
+              style={{
+                marginLeft: 170,
+                marginTop: 10,
+                opacity: 0.2,
+                cursor: "pointer"
+              }}
+            />
+          </div>
+        </span>
+      )}
     </div>
   );
 };
 
-export default withRouter(withMedia(NavBar));
+export default withMedia(withRouter(NavBar));
