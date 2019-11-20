@@ -3,7 +3,7 @@ import WomenItemCards from '../components/womenCards'
 
 const WomenGallery=()=>{
     return(
-        <div>
+        <div id="page-wrap">
             <WomenItemCards/>
         </div>
     )

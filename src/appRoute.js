@@ -13,21 +13,22 @@ import NavBar from "./features/app/navBar";
 import MenGallery from "./features/shop/category/men/container/menContainer";
 import WomenGallery from "./features/shop/category/women/container/womenGallery";
 import CollectionContainer from "./features/shop/category/parmanentCollection/container/CollectionContainer";
-import Footer from "./features/app/footer";
 
 const AppRoute = () => {
   return (
     <Router>
-        <NavBar/>
+      <NavBar />
       <Switch>
-        <Route path='/' exact component={HomeContainer} />
-        <Route path={`/${RoutePath.Contact}`} component={ContactContainer} />        
-        <Route path={`/${RoutePath.Men}`} component={MenGallery} />        
-        <Route path={`/${RoutePath.Women}`} component={WomenGallery} />        
-        <Route path={`/${RoutePath.PermanentCollection}`} component={CollectionContainer} />        
-        <Redirect to='/' />
+        <Route path="/" exact component={HomeContainer} />
+        <Route path={`/${RoutePath.Contact}`} component={ContactContainer} />
+        <Route path={`/${RoutePath.Men}`} component={MenGallery} />
+        <Route path={`/${RoutePath.Women}`} component={WomenGallery} />
+        <Route
+          path={`/${RoutePath.PermanentCollection}`}
+          component={CollectionContainer}
+        />
+        <Redirect to="/" />
       </Switch>
-      <Footer/>
     </Router>
   );
 };

@@ -6,10 +6,11 @@ import MyLink from "../../tools/myLink";
 import * as RoutePath from "../../config/routeConfig";
 import { fsc } from "../../assets/fontControlHelper";
 import * as Colors from "../../config/colorConfig";
+import SideBar from "./sideBar";
+import * as Fonts from "../../config/fontConfig";
 
-const NavBar = ({ match, media }) => {
-  // const { media,match } = props;
-  console.log(window.location);
+const NavBar = props => {
+  const { media } = props;
 
   useEffect(() => {
     window.onscroll = () => {
@@ -37,80 +38,80 @@ const NavBar = ({ match, media }) => {
       className="d-flex flex-row flex-wrap fixed-top justify-content-between py-4"
       id="nav"
     >
-      <div className="flex-row">
+      <div>
         <MyLink
           to={"/"}
           className="px-4"
-          style={{ fontSize: fsc(media, 25), fontStyle: "bold" }}
+          style={{
+            fontSize: 30,
+            fontStyle: "bold",
+            fontFamily: Fonts.logoText,
+            textShadow: "1px 2px 5px gray"
+          }}
           id={"Home"}
-          text={"E.M.D"}
+          text={"E.M.D Footwears"}
           noEffect
         />
-        {media.mobile || media.tablet || (
+        {media.mobile || (
           <span>
             <MyLink
               to={`/${RoutePath.Men}`}
-              style={{ fontSize: fsc(media, 18) }}
-              className="px-3 py-2"
+              style={{ fontSize: fsc(media, 16) }}
+              className="px-2 py-2"
               id={"Men"}
               text={"Men"}
             />
             <MyLink
               to={`/${RoutePath.Women}`}
-              style={{ fontSize: fsc(media, 18) }}
-              className="px-3 py-2"
+              style={{ fontSize: fsc(media, 16) }}
+              className="px-2 py-2"
               id={"Women"}
               text={"Women"}
             />
             <MyLink
               to={`/${RoutePath.PermanentCollection}`}
-              style={{ fontSize: fsc(media, 18) }}
-              className="px-3 py-2"
+              style={{ fontSize: fsc(media, 16) }}
+              className="px-2 py-2"
               id={"Collection"}
               text={"Parmanent Collection"}
             />
             <MyLink
               to={`/${RoutePath.Contact}`}
-              style={{ fontSize: fsc(media, 18) }}
-              className="px-3 py-2"
+              style={{ fontSize: fsc(media, 16) }}
+              className="px-2 py-2"
               id={"Contact"}
               text={"Contact Us"}
             />
           </span>
         )}
       </div>
-      {media.mobile ? (
-        <span className="px-4">
-          <i
-            className="fa fa-list"
-            style={{
-              cursor: "pointer"
-            }}
-          />
-        </span>
-      ) : (
-        <span className="py-2 px-4">
-          <div>
-            <input
-              placeholder="Search Items"
-              className="form-control float-right bg-transparent border"
-              style={{ backgroundColor: "none", boxShadow: "none" }}
-            />
-
-            <i
-              className="fa fa-search position-absolute text-dark"
-              style={{
-                marginLeft: 170,
-                marginTop: 10,
-                opacity: 0.5,
-                cursor: "pointer"
-              }}
-            />
-          </div>
-        </span>
-      )}
+      {media.mobile ? <SideBar /> : <SearchBar />}
     </div>
   );
 };
 
 export default withMedia(withRouter(NavBar));
+
+const SearchBar = () => {
+  return (
+    <span className="py-2 px-4">
+      <div>
+        <input
+          placeholder="Search Items"
+          className="form-control float-right bg-transparent border"
+          style={{boxShadow: "none" }}
+        />
+
+        <i
+          className="fa fa-search position-absolute text-dark"
+          style={{
+            marginLeft: 170,
+            marginTop: 10,
+            opacity: 0.5,
+            cursor: "pointer"
+          }}
+        />
+      </div>
+    </span>
+  );
+};

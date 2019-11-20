@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 import * as Colors from "../config/colorConfig";
 
 const MyLink = props => {
-  const { text, style, className, id, to, noEffect, Active } = props;
+  const { text, style, className, id, to, noEffect, Active, Icon } = props;
   const [hover, SetHover] = useState(false);
   const defaultStyle = {
     textDecoration: "none",
     color: Colors.textBlack,
     width: "100%",
     transition: ".5s",
-    borderBottom: Active === undefined ? null : "3px solid gray"
+    borderBottom: Active === undefined ? null : "3px solid gray",
+    fontSize: 13
   };
   const userStyle = style === undefined ? {} : style;
   const onHover = () => {
@@ -36,7 +37,12 @@ const MyLink = props => {
       onMouseOver={noEffect === undefined ? onHover : null}
       onMouseLeave={noEffect === undefined ? onLeave : null}
     >
-      {text}
+      {Icon === undefined ? null : (
+        <span className='' style={{fontSize:18,color:Colors.textGray,width:20}}>
+          <i className={`${Icon} px-2`} />
+        </span>
+      )}
+      <span>{text}</span>
     </Link>
   );
 };

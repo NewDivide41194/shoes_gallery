@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import BG1 from "../../assets/images/background/bg1.jpg";
 import { withMedia } from "react-media-query-hoc";
 
 const Header = props => {
   const { media } = props;
-  useEffect(() => {
-    const BgCover = document.getElementById("BG");
-    // BgCover.style.zoom='1.5'
-  });
+
   return (
     <div
       id="BG"
@@ -19,8 +16,8 @@ const Header = props => {
           : media.tablet
           ? 600
           : media.mobile
-          ? 300
-          : 700,
+          ? 400
+          : 1100,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%"

@@ -19,7 +19,7 @@ const MenItemCards = props => {
     setLargeView(false);
   };
   return (
-    <div className="d-flex flex-row flex-wrap py-5 px-4">
+    <div className="d-flex flex-row flex-wrap py-5 px-2">
       <span
         style={{ fontFamily: Fonts.textThin, fontSize: fsc(media, 35) }}
         className="pl-3 w-100"
