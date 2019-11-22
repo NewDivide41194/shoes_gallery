@@ -4,8 +4,11 @@ import Footer from '../../../../app/footer'
 
 const MenGallery=()=>{
     return(
-        <div className='py-5' id="page-wrap">
+        <div className='pt-5' id="page-wrap">
+            <div className='container'>
             <MenItemCards/>
+
+            </div>
             <Footer/>
         </div>
     )

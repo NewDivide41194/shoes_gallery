@@ -47,9 +47,9 @@ const MenItemCards = props => {
       {ForMenData.map((v, k) => (
         <div
           className={`${
-            LargeView ? "col-lg-6 col-sm-6" : "col-lg-4 col-sm-4"
+            LargeView ? "col-lg-6 col-md-6" : "col-lg-4 col-md-4"
           } p-3`}
-          style={{ transition: ".5s" }}
+          style={{ transition: ".8s" }}
           key={k}
         >
           <div className="border-bottom pb-3">

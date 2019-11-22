@@ -5,7 +5,7 @@ const ThreeItemsCard = props => {
   return (
     <div className="d-flex flex-row flex-wrap py-5">
       {ThreeItemsData.map((v, k) => (
-        <div className="col-lg-4" key={k}>
+        <div className="col-lg-4 col-md-4" key={k}>
             <img
               className="card-img-top"
               src={process.env.PUBLIC_URL + v.imgURL}

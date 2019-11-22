@@ -6,7 +6,7 @@ import MyLink from "../../tools/myLink";
 import * as RoutePath from "../../config/routeConfig";
 import { fsc } from "../../assets/fontControlHelper";
 import * as Colors from "../../config/colorConfig";
-// import SideBar from "./sideBar";
+import SideBar from "./sideBar";
 import * as Fonts from "../../config/fontConfig";
 
 const NavBar = props => {
@@ -21,7 +21,6 @@ const NavBar = props => {
         document.documentElement.scrollTop > 30
       ) {
         MyNav.style.background = Colors.NavBgColor;
-        MyNav.style.color = Colors.textWhite;
 
         MyNav.style.boxShadow = "1px 1px 10px gray";
       } else {
@@ -41,12 +40,12 @@ const NavBar = props => {
       <div>
         <MyLink
           to={"/"}
-          className="px-4"
+          className="pl-4 pr-2"
           style={{
-            fontSize: 30,
+            fontSize: 28,
             fontStyle: "bold",
-            fontFamily: Fonts.logoText,
-            textShadow: "1px 2px 5px gray"
+            fontFamily: Fonts.titleText,
+            textShadow: "1px 1px 1px gray"
           }}
           id={"Home"}
           text={"E.M.D Footwears"}
@@ -56,28 +55,28 @@ const NavBar = props => {
           <span>
             <MyLink
               to={`/${RoutePath.Men}`}
-              style={{ fontSize: fsc(media, 16) }}
+              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray" }}
               className="px-2 py-2"
               id={"Men"}
               text={"Men"}
             />
             <MyLink
               to={`/${RoutePath.Women}`}
-              style={{ fontSize: fsc(media, 16) }}
+              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray"  }}
               className="px-2 py-2"
               id={"Women"}
               text={"Women"}
             />
             <MyLink
               to={`/${RoutePath.PermanentCollection}`}
-              style={{ fontSize: fsc(media, 16) }}
+              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray"  }}
               className="px-2 py-2"
               id={"Collection"}
               text={"Parmanent Collection"}
             />
             <MyLink
               to={`/${RoutePath.Contact}`}
-              style={{ fontSize: fsc(media, 16) }}
+              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray"  }}
               className="px-2 py-2"
               id={"Contact"}
               text={"Contact Us"}
@@ -85,7 +84,7 @@ const NavBar = props => {
           </span>
         )}
       </div>
-      {/* {media.mobile ? <SideBar /> : <SearchBar />} */}
+      {media.mobile ? <SideBar /> : <SearchBar />}
     </div>
   );
 };

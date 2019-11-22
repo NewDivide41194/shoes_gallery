@@ -1,5 +1,5 @@
 import React from "react";
-import BG1 from "../../assets/images/background/bg1.jpg";
+import BG1 from "../../../assets/images/background/bg2.jpg";
 import { withMedia } from "react-media-query-hoc";
 
 const Header = props => {
@@ -12,25 +12,17 @@ const Header = props => {
         backgroundImage: `url(${BG1})`,
         backgroundPosition: "center",
         height: media.desktop
-          ? 800
+          ? 300
           : media.tablet
-          ? 600
+          ? 300
           : media.mobile
-          ? 400
-          : 1100,
+          ? 200
+          : 400,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        width: "100%",
-        paddingTop:'35%',
-        paddingLeft:'10%'
       }}
-    >
-      <span style={{fontSize:55,}}>NIKE</span><br/>
-      <span style={{fontSize:35,}}>Just do it</span>
-
-    </div>
+    ></div>
   );
 };
 
 export default withMedia(Header);
-

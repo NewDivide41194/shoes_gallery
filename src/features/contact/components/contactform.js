@@ -1,36 +1,53 @@
-import React from 'react'
-import withMedia from 'react-media-query-hoc/dist/with-media'
+import React from "react";
+import withMedia from "react-media-query-hoc/dist/with-media";
 
-import * as Colors from '../../../config/colorConfig'
+import * as Fonts from "../../../config/fontConfig";
+import MyInput from "../../../tools/myInput";
+import MyButton from "../../../tools/myButton";
 
 const ContactForm = props => {
-    const {media} = props
-    return (
-        <div className='' >
-            <form className='py-3'>
-                <div className='d-flex flex-row flex-wrap justify-content-between py-2'>
-                    <div className='flex-fill  p-1'>
-                        <input id={'name'} placeHolder={'Name'} style={{fontColor:'#5A6367'}}/>  
-                        
-                    </div>
-                    <div className='flex-fill  p-1'>
-                        <input id={'email'} placeHolder={'Email'} style={{fontColor:'#5A6367'}}/>
-                    </div>
-                </div>
-                
-               
-                <div className='p-1 py-2'>
-                    <input className='' id={'subject'} placeHolder={'Subject'} style={{fontColor:'#5A6367'}}/>  
-                </div>
-                <div className='p-1 py-2'>
-                    <textarea id='message' placeholder='Your Message' style={{fontSize:12,fontColor:'#5A6367',maxHeight:'8rem',width:'100%',padding:20}} onFocus={(e)=> document.getElementById('message').style.border=`2px solid ${Colors.textBlack}`}/>  
-                </div>
-                <div className=' p-1 py-2'>
-                    {/* <button text={'Send'} width={media.desktop?'50%':'100%'}/>  */}
-                </div>
-            </form>
+  const { media } = props;
+  return (
+    <form className="py-4">
+      <span style={{ fontSize: 30, fontFamily: Fonts.titleText }}>
+        Let us know your suggestion!
+      </span>
 
+      <div className="d-flex flex-row flex-wrap justify-content-between">
+        <div className="flex-fill  p-1">
+          <MyInput
+            id={"name"}
+            label={"Name"}
+            type={"text"}
+            style={{ fontColor: "#5A6367" }}
+          />
         </div>
-    )
-}
-export default withMedia(ContactForm)
+        <div className="flex-fill  p-1">
+          <MyInput
+            id={"email"}
+            label={"Email"}
+            placeHolder={"Email"}
+            type={"email"}
+            style={{ fontColor: "#5A6367" }}
+          />
+        </div>
+      </div>
+
+      <div className="p-1 ">
+        <MyInput
+          label={"Subject"}
+          id={"subject"}
+          type={"text"}
+          style={{ fontColor: "#5A6367" }}
+        />
+      </div>
+      <div className="p-1">
+        <MyInput id="message" label={"Your Message"} multiline />
+      </div>
+      <div className="mt-4 p-1">
+        <MyButton type={"submit"} />
+      </div>
+    </form>
+  );
+};
+export default withMedia(ContactForm);

@@ -16,7 +16,7 @@ const FourItemsCard = () => {
   return (
     <div className="d-flex flex-row flex-wrap py-5">
       {FourItemsData.map((v, k, a) => (
-        <div className="col-lg-3 p-2" key={k}>
+        <div className="col-lg-3 col-md-6 p-2" key={k}>
           <div className="card">
             <div className="text-center">
               <MyLink

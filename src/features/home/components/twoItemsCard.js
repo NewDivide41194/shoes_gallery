@@ -1,20 +1,33 @@
 import React from "react";
+import { Fade } from "react-slideshow-image";
+
+const slideImages = [
+  "images/shoes/men/nike/nk2.jpg",
+  "images/shoes/men/timberland/tbl1.jpg"
+];
+
+const properties = {
+  duration: 2000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: false,
+  arrows: false,
+  onChange: (oldIndex, newIndex) => {
+    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+  }
+};
 
 const TwoItemsCard = props => {
   return (
-    <div className="d-flex flex-row flex-wrap py-5">
-      {TwoItemsData.map((v, k) => (
-        <div className="col-lg-6" key={k}>
-          <div className="">
-            <img
-              className="w-100"
-              src={process.env.PUBLIC_URL + v.imgURL}
-              alt="ThreeItems"
-            />
+    <div className="slide-container d-flex flex-row flex-wrap py-5">
+      <Fade {...properties}>
+        {TwoItemsData.map((v, k) => (
+          <div className="image-container" style={{ width: 500 }}>
+            <img src={v.imgURL} style={{ width: "100%" }} />
+            <p>{v.name}</p>
           </div>
-          <span>{v.name}</span>
-        </div>
-      ))}
+        ))}
+      </Fade>
     </div>
   );
 };

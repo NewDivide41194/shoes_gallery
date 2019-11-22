@@ -1,24 +1,31 @@
 import React from "react";
 
 import ContactForm from "../components/contactform";
+import ContactMap from "../components/contactMap";
+import Footer from "../../app/footer";
+import ContactHeader from "../components/contactHeader";
 import ContactInfo from "../components/contactInfo";
-import Footer from '../../app/footer'
+import OpeningHour from "../components/openingHours";
+
 
 const Contact = () => {
   return (
-    <div className="container-fluid p-0">
-      <div className='container'>
-         <div className='d-flex flex-wrap'>
-        <div className='col-lg-6'>
-            <ContactInfo/>   
+    <div className="">
+      <ContactHeader />
+      <div className="container">
+        <div className="py-4">
+          <ContactInfo />
         </div>
-        <div className='col-lg-6'>
-            <ContactForm/>
+        <div className="py-4">
+          <ContactForm />
         </div>
-    </div>
+        <OpeningHour/>
       </div>
-     
-        <Footer/>
+      <div className="col-12 px-0">
+        <ContactMap />
+      </div>
+
+      <Footer />
     </div>
   );
 };
