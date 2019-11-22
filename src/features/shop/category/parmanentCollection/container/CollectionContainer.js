@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Carousel from "../../../../home/components/middleCarousel";
 
-const CollectionContainer=()=>{
-    return(
-        <div>
-            CollectionContainer
-        </div>
-    )
-}
+import Photo1 from "../../../../../assets/images/background/all/1.jpg";
+import Photo2 from "../../../../../assets/images/background/all/2.jpg";
+import Photo3 from "../../../../../assets/images/background/all/3.jpg";
 
-export default CollectionContainer
+const CollectionContainer = () => {
+  return (
+    <div>
+      <Carousel Photo1={Photo1} Photo2={Photo2} Photo3={Photo3} />
+    </div>
+  );
+};
+
+export default CollectionContainer;

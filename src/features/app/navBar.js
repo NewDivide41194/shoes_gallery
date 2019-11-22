@@ -6,7 +6,7 @@ import MyLink from "../../tools/myLink";
 import * as RoutePath from "../../config/routeConfig";
 import { fsc } from "../../assets/fontControlHelper";
 import * as Colors from "../../config/colorConfig";
-import SideBar from "./sideBar";
+// import SideBar from "./sideBar";
 import * as Fonts from "../../config/fontConfig";
 
 const NavBar = props => {
@@ -35,7 +35,7 @@ const NavBar = props => {
 
   return (
     <div
-      className="d-flex flex-row flex-wrap fixed-top justify-content-between py-4"
+      className="d-flex flex-row flex-wrap fixed-top justify-content-between py-3"
       id="nav"
     >
       <div>
@@ -85,7 +85,7 @@ const NavBar = props => {
           </span>
         )}
       </div>
-      {media.mobile ? <SideBar /> : <SearchBar />}
+      {/* {media.mobile ? <SideBar /> : <SearchBar />} */}
     </div>
   );
 };

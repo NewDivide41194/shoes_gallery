@@ -4,24 +4,28 @@ import TwoItemsCard from "../components/twoItemsCard";
 import FourItemsCard from "../components/fourItemsCard";
 import Header from "../../app/header";
 import Footer from "../../app/footer";
-import MiddleCarousel from '../components/middleCarousel'
+import MiddleCarousel from "../components/middleCarousel";
+
+import Photo1 from "../../../assets/images/background/all/1.jpg";
+import Photo2 from "../../../assets/images/background/all/2.jpg";
+import Photo3 from "../../../assets/images/background/all/3.jpg";
 
 const HomeContainer = props => {
   return (
-    <div id="outer-container" style={{height: '100%'}}>
+    <div id="outer-container" style={{ height: "100%" }}>
       <div id="page-wrap">
-      <Header />
-      <div className="container">
-        <ThreeItemsCard />
+        <Header />
+        <div className="container">
+          <ThreeItemsCard />
+        </div>
         <TwoItemsCard />
-        <FourItemsCard />
+        <div className="container">
+          <FourItemsCard />
+        </div>
+        <MiddleCarousel Photo1={Photo1} Photo2={Photo2} Photo3={Photo3} />
+        <Footer />
       </div>
-      <MiddleCarousel/>
-
-      <Footer/>
     </div>
-    </div>
-    
   );
 };
 

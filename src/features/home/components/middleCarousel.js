@@ -1,13 +1,13 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import Photo1 from "../../../assets/images/background/all/1.jpg";
-import Photo2 from "../../../assets/images/background/all/2.jpg";
-import Photo3 from "../../../assets/images/background/all/3.jpg";
 
-const MiddleCarousel = () => {
+
+const MiddleCarousel = props => {
+  const {Photo1,Photo2,Photo3}=props
   return (
-      <Carousel
+    <div className='pb-4'>
+        <Carousel
         showThumbs={false}
         autoPlay={true}
         showArrows={false}
@@ -29,6 +29,8 @@ const MiddleCarousel = () => {
           <img src={Photo3}/>
         </div>
       </Carousel>
+    </div>
+    
   );
 };
 

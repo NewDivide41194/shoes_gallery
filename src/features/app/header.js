@@ -20,9 +20,15 @@ const Header = props => {
           : 1100,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        width: "100%"
+        width: "100%",
+        paddingTop:'35%',
+        paddingLeft:'10%'
       }}
-    ></div>
+    >
+      <span style={{fontSize:55,}}>NIKE</span><br/>
+      <span style={{fontSize:35,}}>Just do it</span>
+
+    </div>
   );
 };
 
