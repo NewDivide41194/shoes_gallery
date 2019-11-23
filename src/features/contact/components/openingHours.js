@@ -22,49 +22,49 @@ const OpeningHour = () => {
               <td>
                 <b>Mon</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 6Pm</td>
             </tr>
             <tr>
               <td>
                 <b>Tue</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 6Pm</td>
             </tr>{" "}
             <tr>
               <td>
                 <b>Wed</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 6Pm</td>
             </tr>{" "}
             <tr>
               <td>
                 <b>Thu</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 6Pm</td>
             </tr>{" "}
             <tr>
               <td>
                 <b>Fri</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 6Pm</td>
             </tr>{" "}
             <tr>
               <td>
                 <b>Sat</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 5Pm</td>
             </tr>
             <tr>
               <td>
                 <b>Sun</b>
               </td>
-              <td>---------------</td>
+              <td>------------</td>
               <td>10Am - 12Pm</td>
             </tr>
           </tbody>

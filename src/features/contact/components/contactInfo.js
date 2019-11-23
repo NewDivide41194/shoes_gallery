@@ -3,7 +3,7 @@ import { titleText } from "../../../config/fontConfig";
 
 const ContactInfo = () => {
   return (
-    <div id="page-wrap" className="d-flex flex-row flex-wrap text-center py-4" style={{lineHeight:2}}>
+    <div id="page-wrap" className="d-flex flex-row flex-wrap text-center" style={{lineHeight:2}}>
       <span style={{ fontSize: 35,fontFamily:titleText }} className="w-100">
         About E.M.D
       </span>

@@ -20,9 +20,9 @@ const NavBar = props => {
         document.body.scrollTop > 30 ||
         document.documentElement.scrollTop > 30
       ) {
-        MyNav.style.background = Colors.NavBgColor;
+        MyNav.style.background = Colors.textBlack;
 
-        MyNav.style.boxShadow = "1px 1px 10px gray";
+        MyNav.style.boxShadow = "1px 1px 5px black";
       } else {
         MyNav.style.background = "none";
         MyNav.style.boxShadow = "none";
@@ -42,10 +42,10 @@ const NavBar = props => {
           to={"/"}
           className="pl-4 pr-2"
           style={{
-            fontSize: 28,
+            fontSize: 30,
             fontStyle: "bold",
             fontFamily: Fonts.titleText,
-            textShadow: "1px 1px 1px gray"
+            color:Colors.textOragne,
           }}
           id={"Home"}
           text={"E.M.D Footwears"}
@@ -55,31 +55,32 @@ const NavBar = props => {
           <span>
             <MyLink
               to={`/${RoutePath.Men}`}
-              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray" }}
-              className="px-2 py-2"
+              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite
+            }}
+              className="px-3 py-2"
               id={"Men"}
-              text={"Men"}
+              text={"MEN"}
             />
             <MyLink
               to={`/${RoutePath.Women}`}
-              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray"  }}
-              className="px-2 py-2"
+              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite  }}
+              className="px-3 py-2"
               id={"Women"}
-              text={"Women"}
+              text={"WOMEN"}
             />
             <MyLink
               to={`/${RoutePath.PermanentCollection}`}
-              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray"  }}
-              className="px-2 py-2"
+              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite  }}
+              className="px-3 py-2"
               id={"Collection"}
-              text={"Parmanent Collection"}
+              text={"PARMANENT COLLECTION"}
             />
             <MyLink
               to={`/${RoutePath.Contact}`}
-              style={{ fontSize: fsc(media, 16),textShadow: "1px 1px 1px gray"  }}
-              className="px-2 py-2"
+              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite  }}
+              className="px-3 py-2"
               id={"Contact"}
-              text={"Contact Us"}
+              text={"CONTACT US"}
             />
           </span>
         )}
@@ -102,7 +103,7 @@ const SearchBar = () => {
         />
 
         <i
-          className="fa fa-search position-absolute text-dark"
+          className="fa fa-search position-absolute text-light"
           style={{
             marginLeft: 170,
             marginTop: 10,

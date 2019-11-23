@@ -13,7 +13,7 @@ const properties = {
 const TwoItemsCard = props => {
   const { Images } = props;
   return (
-    <div className="slide-container col-lg-6 py-5">
+    <div className="slide-container col-lg-6 col-md-6 py-5">
       <Fade {...properties}>
         <div className="each-fade">
           <div className="image-container">
@@ -43,15 +43,3 @@ const TwoItemsCard = props => {
 
 export default TwoItemsCard;
 
-const TwoItemsData = [
-  {
-    id: 1,
-    name: "Nike Sport",
-    imgURL: "images/shoes/men/nike/nk2.jpg"
-  },
-  {
-    id: 2,
-    name: "Nike Sport",
-    imgURL: "images/shoes/men/timberland/tbl1.jpg"
-  }
-];

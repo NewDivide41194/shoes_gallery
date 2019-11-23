@@ -11,6 +11,7 @@ const MyLink = props => {
     color: Colors.textBlack,
     width: "100%",
     transition: ".5s",
+    boxShadow:'none',
     borderBottom: Active === undefined ? null : "3px solid gray",
     fontSize: 13
   };

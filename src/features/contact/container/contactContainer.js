@@ -7,7 +7,6 @@ import ContactHeader from "../components/contactHeader";
 import ContactInfo from "../components/contactInfo";
 import OpeningHour from "../components/openingHours";
 
-
 const Contact = () => {
   return (
     <div className="">
@@ -16,13 +15,15 @@ const Contact = () => {
         <div className="py-4">
           <ContactInfo />
         </div>
-        <div className="py-4">
-          <ContactForm />
+        <div className='rowpy-4'>
+          <div className="col-lg-6 col-sm-12">
+            <ContactForm />
+          </div>
+          <div className="col-lg-6 col-sm-12 p-0">
+            <ContactMap />
+          </div>
         </div>
-        <OpeningHour/>
-      </div>
-      <div className="col-12 px-0">
-        <ContactMap />
+        <OpeningHour />
       </div>
 
       <Footer />

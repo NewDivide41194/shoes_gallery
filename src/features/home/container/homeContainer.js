@@ -19,12 +19,12 @@ const HomeContainer = props => {
     <div id="outer-container" style={{ height: "100%" }}>
       <div id="page-wrap">
         <Header Background={BG1} />
-        {media.desktop ? <ScrollDown /> : null}
+        {media.desktop || media.mobile || media.tablet ? null : <ScrollDown />}
         <div className="container">
           <ThreeItemsCard />
           <div className="row">
-            <TwoItemsCard Images={Nike} />
-            <TwoItemsCard Images={Nike} />
+            <TwoItemsCard Images={Allstars} />
+            <TwoItemsCard Images={Vans} />
           </div>
 
           <FourItemsCard />
@@ -38,16 +38,16 @@ const HomeContainer = props => {
 
 export default withMedia(HomeContainer);
 
-const Nike = [
-  "images/shoes/men/nike/nk4.jpg",
-  "images/shoes/men/nike/nk2.jpg",
-  "images/shoes/men/nike/nk3.jpg",
-  "images/shoes/men/nike/nk1.jpg"
+const Allstars = [
+  "images/shoes/men/allstars/as3.jpg",
+  "images/shoes/men/allstars/as2.jpg",
+  "images/shoes/men/allstars/as1.jpg",
+  "images/shoes/men/allstars/as4.jpg"
 ];
 
 const Vans = [
-  "images/shoes/men/vans/van1.jpeg",
-  "images/shoes/men/vans/van1.jpeg",
-  "images/shoes/men/vans/van1.jpeg",
-  "images/shoes/men/vans/van1.jpeg"
+  "images/shoes/men/vans/van4.jpg",
+  "images/shoes/men/vans/van2.jpg",
+  "images/shoes/men/vans/van3.jpg",
+  "images/shoes/men/vans/van1.jpg"
 ];
