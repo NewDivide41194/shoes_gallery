@@ -15,7 +15,8 @@ const SideBar = () => {
       top: "23px"
     },
     bmBurgerBars: {
-      background: Colors.textGray
+      background: Colors.textWhite,
+      boxShadow: "1px 1px 1px gray"
     },
     bmBurgerBarsHover: {
       background: "#a90000"
@@ -35,7 +36,7 @@ const SideBar = () => {
     bmMenu: {
       background: "rgba(50,50,50)",
       padding: "2.5em .5em 0",
-      fontSize: "1.15em",
+      fontSize: "1.15em"
     },
     bmMorphShape: {
       fill: "#373a47"
@@ -101,4 +102,3 @@ const SideBar = () => {
 };
 
 export default SideBar;
-

@@ -64,7 +64,7 @@ const Footer = props => {
           <div className="row">
             <span className="col-4 text-right">Newsletter</span>
             <MyInput className="col-5 mt-0" />
-            <span className="col-3 text-left" style={{ cursor: "pointer" }}>
+            <span className="text-left" style={{ cursor: "pointer" }}>
               Submit
             </span>
           </div>

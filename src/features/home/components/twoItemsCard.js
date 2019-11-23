@@ -1,33 +1,42 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
 
-const slideImages = [
-  "images/shoes/men/nike/nk2.jpg",
-  "images/shoes/men/timberland/tbl1.jpg"
-];
-
 const properties = {
-  duration: 2000,
+  duration: 5000,
   transitionDuration: 500,
   infinite: true,
   indicators: false,
-  arrows: false,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-  }
+  arrows: true,
+  autoplay:false
 };
 
 const TwoItemsCard = props => {
+  const { Images } = props;
   return (
-    <div className="slide-container d-flex flex-row flex-wrap py-5">
+    <div className="slide-container col-lg-6 py-5">
       <Fade {...properties}>
-        {TwoItemsData.map((v, k) => (
-          <div className="image-container" style={{ width: 500 }}>
-            <img src={v.imgURL} style={{ width: "100%" }} />
-            <p>{v.name}</p>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={Images[0]} style={{ width: "100%" }} />
           </div>
-        ))}
+        </div>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={Images[1]} style={{ width: "100%" }} />
+          </div>
+        </div>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={Images[2]} style={{ width: "100%" }} />
+          </div>
+        </div>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={Images[3]} style={{ width: "100%" }} />
+          </div>
+        </div>
       </Fade>
+      <span>Hello</span>
     </div>
   );
 };

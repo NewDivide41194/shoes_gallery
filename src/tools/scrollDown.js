@@ -13,7 +13,7 @@ const ScrollDown = () => {
         position: "absolute",
         left: "50%",
         marginLeft: -30,
-        bottom: 30,
+        bottom: 40,
         cursor: "pointer"
       }}
       onClick={_handleScrollDown}

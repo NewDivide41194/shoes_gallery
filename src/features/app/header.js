@@ -1,15 +1,14 @@
 import React from "react";
-import BG1 from "../../assets/images/background/bg1.jpg";
 import { withMedia } from "react-media-query-hoc";
 
 const Header = props => {
-  const { media } = props;
+  const { media,Background } = props;
 
   return (
     <div
       id="BG"
       style={{
-        backgroundImage: `url(${BG1})`,
+        backgroundImage: `url(${Background})`,
         backgroundPosition: "center",
         height: media.desktop
           ? 800
@@ -24,9 +23,10 @@ const Header = props => {
         paddingTop:'35%',
         paddingLeft:'10%'
       }}
+      className='text-light'
     >
-      <span style={{fontSize:55,}}>NIKE</span><br/>
-      <span style={{fontSize:35,}}>Just do it</span>
+      <span style={{fontSize:45,fontWeight:'bold',textShadow:'1px 1px 2px gray'}}>NIKE</span><br/>
+      <span style={{fontSize:35,textShadow:'1px 1px 1px gray'}}>Just do it .</span>
 
     </div>
   );

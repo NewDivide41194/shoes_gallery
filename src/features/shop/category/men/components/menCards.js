@@ -66,8 +66,9 @@ const MenItemCards = props => {
             </div>
             
             <div className="px-3 pt-3 border-top">
-              <h4 className="">{v.name}</h4>
-              <h5 className="">{v.model}</h5>
+              <span style={{fontSize:20,fontWeight:'bold'}}>{v.name}</span>
+              {' '}
+              <span style={{fontSize:18}}>{v.model}</span>
 
               <table>
                 <tbody>

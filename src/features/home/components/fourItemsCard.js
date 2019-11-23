@@ -11,28 +11,27 @@ const FourItemsCard = () => {
     const IMG = document.getElementById(e.target.id);
     IMG.style.filter = "brightness(100%)";
     // document.getElementById(e).style.opacity = 0;
-
   };
+
   return (
     <div className="d-flex flex-row flex-wrap py-5">
-      {FourItemsData.map((v, k, a) => (
+      {FourItemsData.map((v, k) => (
         <div className="col-lg-3 col-md-6 p-2" key={k}>
           <div className="card">
             <div className="text-center">
-              <MyLink
+              {/* {<MyLink
                 className="w-100 position-absolute"
-                // id={a}
-                style={{ paddingTop: "7rem", zIndex: 2, opacity: 0 }}
+                id={v.id}
+                style={{ paddingTop: "7rem", zIndex: 12 }}
                 text={"Shop this item"}
-              />
+              />} */}
 
               <img
                 src={process.env.PUBLIC_URL + v.imgURL}
                 className="card-img-top"
                 id={v.id}
-                alt="..."
-                onMouseOver={id => _handleHover(id)}
-                onMouseLeave={id => _handleLeave(id)}
+                onMouseOver={(id) => _handleHover(id)}
+                onMouseLeave={(id) => _handleLeave(id)}
               />
             </div>
             <div className="card-body">
