@@ -1,7 +1,10 @@
 
-export const Shop='shop'
+export const Item='item'
 
 export const Category='category'
+
+export const Shop='shop'
+
 
 export const Women='women'
 

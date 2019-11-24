@@ -4,6 +4,7 @@ import { withMedia } from "react-media-query-hoc";
 import ThumbButton from "../../../../app/thumbButton";
 import * as Fonts from "../../../../../config/fontConfig";
 import { fsc } from "../../../../../assets/fontControlHelper";
+import MyButton from '../../../../../tools/myButton'
 
 const MenItemCards = props => {
   const { media } = props;
@@ -53,24 +54,22 @@ const MenItemCards = props => {
           key={k}
         >
           <div className="border-bottom pb-3">
-            <div style={{overflow:'hidden'}}>
+            <div style={{ overflow: "hidden" }}>
               <img
-              src={process.env.PUBLIC_URL + v.imgURL}
-              id={v.id}
-              className="card-img-top"
-              onMouseOver={_handleHover}
-              onMouseLeave={_handleHover}
-              style={{transition:'1s',transform:'scale(.9)'}}
-              alt="..."
-            />
+                src={process.env.PUBLIC_URL + v.imgURL}
+                id={v.id}
+                className="card-img-top"
+                onMouseOver={_handleHover}
+                onMouseLeave={_handleHover}
+                style={{ transition: "1s", transform: "scale(.9)" }}
+                alt="..."
+              />
             </div>
-            
-            <div className="px-3 pt-3 border-top">
-              <span style={{fontSize:20,fontWeight:'bold'}}>{v.name}</span>
-              {' '}
-              <span style={{fontSize:18}}>{v.model}</span>
 
-              <table>
+            <div className="px-3 pt-3 border-top">
+              <span style={{ fontSize: 20, fontWeight: "bold" }}>{v.name}</span><br/>
+              <span style={{ fontSize: 18 }}>{v.model}</span>
+              <table className="w-100">
                 <tbody>
                   <tr>
                     <td>Color</td>
@@ -84,6 +83,16 @@ const MenItemCards = props => {
                     <td>:</td>
                     <td>
                       <b>{v.price}</b> <i>MMK</i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colSpan="3" className="pt-2">
+                      <MyButton
+                        type={"submit"}
+                        className='py-2'
+                        text={"Shop Now"}
+                        color={"primary"}
+                      />
                     </td>
                   </tr>
                 </tbody>

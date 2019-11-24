@@ -13,6 +13,7 @@ import NavBar from "./features/app/navBar";
 import MenGallery from "./features/shop/category/men/container/menContainer";
 import WomenGallery from "./features/shop/category/women/container/womenGallery";
 import CollectionContainer from "./features/shop/category/parmanentCollection/container/CollectionContainer";
+import ItemDetail from "./features/shop/items/components/itemDetail";
 
 const AppRoute = () => {
   return (
@@ -23,10 +24,8 @@ const AppRoute = () => {
         <Route path={`/${RoutePath.Contact}`} component={ContactContainer} />
         <Route path={`/${RoutePath.Men}`} component={MenGallery} />
         <Route path={`/${RoutePath.Women}`} component={WomenGallery} />
-        <Route
-          path={`/${RoutePath.PermanentCollection}`}
-          component={CollectionContainer}
-        />
+        <Route path={`/${RoutePath.PermanentCollection}`} component={CollectionContainer} />
+        <Route path={`/${RoutePath.Item}/:id`} component={ItemDetail}/ >
         <Redirect to="/" />
       </Switch>
     </Router>
