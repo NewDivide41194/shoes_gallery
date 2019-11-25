@@ -15,7 +15,7 @@ const Contact = () => {
         <div className="py-4">
           <ContactInfo />
         </div>
-        <div className='rowpy-4'>
+        <div className='row py-4'>
           <div className="col-lg-6 col-sm-12">
             <ContactForm />
           </div>
