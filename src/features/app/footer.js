@@ -77,6 +77,7 @@ const Footer = props => {
           </span>
         </div>
       </div>
+    
     </div>
   );
 };

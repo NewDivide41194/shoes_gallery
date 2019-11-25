@@ -2,16 +2,14 @@ import React from "react";
 import MyLink from "../../../tools/myLink";
 
 const FourItemsCard = () => {
-  const _handleHover = e => {
-    const IMG = document.getElementById(e.target.id);
-    IMG.style.filter = "brightness(50%)";
-    // document.getElementById(e).style.opacity = 1;
-  };
-  const _handleLeave = e => {
-    const IMG = document.getElementById(e.target.id);
-    IMG.style.filter = "brightness(100%)";
-    // document.getElementById(e).style.opacity = 0;
-  };
+//   const _handleHover = e => {
+//     const IMG = document.getElementById(e.target.id);
+//     IMG.style.filter = "brightness(50%)";
+//   };
+//   const _handleLeave = e => {
+//     const IMG = document.getElementById(e.target.id);
+//     IMG.style.filter = "brightness(100%)";
+//   };
 
   return (
     <div className="d-flex flex-row flex-wrap py-5">
@@ -30,16 +28,15 @@ const FourItemsCard = () => {
                 src={process.env.PUBLIC_URL + v.imgURL}
                 className="card-img-top"
                 id={v.id}
-                onMouseOver={(id) => _handleHover(id)}
-                onMouseLeave={(id) => _handleLeave(id)}
+                // onMouseOver={(id) => _handleHover(id)}
+                // onMouseLeave={(id) => _handleLeave(id)}
               />
             </div>
             <div className="card-body">
               <h5 className="card-title">{v.name}</h5>
               <p className="card-text">{v.desc}</p>
-              <a href="#" className="btn btn-secondary" alt="FourItems">
-                Shop Now
-              </a>
+              <MyLink href="#" className="btn btn-primary text-light" alt="FourItems" text={"View Detail"} noEffect/>
+               
             </div>
           </div>
         </div>

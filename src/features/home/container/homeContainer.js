@@ -16,23 +16,20 @@ import withMedia from "react-media-query-hoc/dist/with-media";
 const HomeContainer = props => {
   const { media } = props;
   return (
-    <div id="outer-container" style={{ height: "100%" }}>
-      <div id="page-wrap">
+      <div>
         <Header Background={BG1} />
-        {media.desktop || media.mobile || media.tablet ? null : <ScrollDown />}
+        {media.desktop || media.largeDesktop ? <ScrollDown />:null}
         <div className="container">
           <ThreeItemsCard />
           <div className="row">
             <TwoItemsCard Images={Allstars} />
             <TwoItemsCard Images={Vans} />
           </div>
-
           <FourItemsCard />
         </div>
         <MiddleCarousel Photo1={Photo1} Photo2={Photo2} Photo3={Photo3} />
         <Footer />
       </div>
-    </div>
   );
 };
 

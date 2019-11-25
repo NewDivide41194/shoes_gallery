@@ -11,7 +11,7 @@ import * as Fonts from "../../config/fontConfig";
 
 const NavBar = props => {
   const { media, history } = props;
-  console.log(history);
+  // console.log(history);
   // const ActiveStyle = "#999999";
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const NavBar = props => {
         document.body.scrollTop > 30 ||
         document.documentElement.scrollTop > 30
       ) {
-        MyNav.style.background = Colors.textBlack;
+        MyNav.style.background = 'rgba(0,0,0,.9)';
 
         MyNav.style.boxShadow = "1px 1px 5px black";
       } else {
@@ -31,28 +31,31 @@ const NavBar = props => {
     };
   });
 
-
   return (
-    <div
+    <div>
+       <div
       className="d-flex flex-row flex-wrap fixed-top justify-content-between py-3"
       id="nav"
+      style={{zIndex:15}}
     >
-      <div>
-        <MyLink
-          to={"/"}
-          className="pl-4 pr-2"
-          style={{
-            fontSize: 30,
-            fontStyle: "bold",
-            fontFamily: Fonts.titleText,
-            color: Colors.textOragne
-          }}
-          id={"Home"}
-          text={"E.M.D Footwears"}
-          noEffect
-        />
-        {media.mobile || (
-          <span>
+        <div>
+          <MyLink
+            to={"/"}
+            className="pl-4 pr-2"
+            style={{
+              fontSize: 30,
+              fontStyle: "bold",
+              fontFamily: Fonts.titleText,
+              color: Colors.textOragne
+            }}
+            id={"Home"}
+            text={"E.M.D Footwears"}
+            noEffect
+          />
+        </div>
+
+        {media.desktop || media.largeDesktop ? (
+          <div className='px-5 py-2'>
             <MyLink
               to={`/${RoutePath.Men}`}
               style={{
@@ -63,6 +66,7 @@ const NavBar = props => {
               className="px-3 py-2"
               id={"Men"}
               text={"MEN"}
+              active
             />
             <MyLink
               to={`/${RoutePath.Women}`}
@@ -97,36 +101,13 @@ const NavBar = props => {
               id={"Contact"}
               text={"CONTACT US"}
             />
-          </span>
-        )}
-      </div>
-      {media.mobile ? <SideBar /> : <SearchBar />}
+          </div>
+        ) : null}
     </div>
+
+    </div>
+   
   );
 };
 
 export default withMedia(withRouter(NavBar));
-
-const SearchBar = () => {
-  return (
-    <span className="py-2 px-4">
-      <div>
-        <input
-          placeholder="Search Items"
-          className="form-control float-right bg-transparent border"
-          style={{ boxShadow: "none" }}
-        />
-
-        <i
-          className="fa fa-search position-absolute text-light"
-          style={{
-            marginLeft: 170,
-            marginTop: 10,
-            opacity: 0.5,
-            cursor: "pointer"
-          }}
-        />
-      </div>
-    </span>
-  );
-};

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { slide as Menu } from "react-burger-menu";
+import { push as Menu } from "react-burger-menu";
 import MyLink from "../../tools/myLink";
 import * as RoutePath from "../../config/routeConfig";
 import * as Colors from "../../config/colorConfig";
+import * as Fonts from '../../config/fontConfig'
 
 const SideBar = () => {
   const styles = {
     bmBurgerButton: {
       position: "fixed",
-      boxShadow: "none",
       width: "30px",
       height: "30px",
       left: "85%",
@@ -34,7 +34,7 @@ const SideBar = () => {
       top: 0
     },
     bmMenu: {
-      background: "rgba(50,50,50)",
+      background: "rgba(255,255,255)",
       padding: "2.5em .5em 0",
       fontSize: "1.15em"
     },
@@ -49,51 +49,75 @@ const SideBar = () => {
       display: "inline-block"
     },
     bmOverlay: {
-      background: "rgb(0, 0, 0)",
-      zIndex: 9
+      background: "rgb(0, 0, 0,.5)",
+      zIndex: 5
     }
   };
+  const [MenuOpen,setMenuOpen]=useState(false)
+
+  const CloseMenu = ()=> {
+    setMenuOpen(!MenuOpen)
+    console.log(MenuOpen);
+  };
+
+  const StateChange=(e)=>{setMenuOpen(e.isOpen)}
 
   return (
     <Menu
       styles={styles}
       right
+      isOpen={MenuOpen}
       pageWrapId={"page-wrap"}
-      outerContainerId={"outer-container"}
+      outerContainerId={"outer-container"}      
+      onStateChange={(e) => StateChange(e)}
     >
-      <MyLink
-        to={"/"}
-        className="pl-3 pb-4 border-bottom text-light"
-        id={"main"}
-        style={{ fontSize: 15 }}
-        text={"E.M.D"}
-        noEffect
-      />
+          <MyLink
+            to={"/"}
+            className="text-center pb-2"
+            style={{
+              fontSize: 25,
+              fontStyle: "bold",
+              fontFamily: Fonts.titleText,              
+
+            }}
+            onClick={()=>CloseMenu()}
+            id={"Home"}
+            text={"E.M.D Footwears"}
+            noEffect
+          />
       <MyLink
         to={`/${RoutePath.Men}`}
-        className="pl-3 py-3 text-light"
+        className="pl-3 py-3"
         id={"Men"}
+        onClick={()=>CloseMenu()}
+
         style={{ fontSize: 15 }}
         text={"MEN"}
       />
       <MyLink
         to={`/${RoutePath.Women}`}
-        className="pl-3 py-3 text-light"
+        className="pl-3 py-3"
         id={"Women"}
+        onClick={()=>CloseMenu()}
+
         style={{ fontSize: 15 }}
         text={"WOMEN"}
       />
       <MyLink
         to={`/${RoutePath.PermanentCollection}`}
-        className="pl-3 py-3 text-light"
+        className="pl-3 py-3"
         id={"Collection"}
+        onClick={()=>CloseMenu()}
+
         style={{ fontSize: 15 }}
         text={"PARMANENT COLLECTION"}
       />
       <MyLink
         to={`/${RoutePath.Contact}`}
-        className="px-3 py-3 text-light"
+        className="px-3 py-3"
         id={"Contact"}
+        onClick={()=>CloseMenu()}
+
         style={{ fontSize: 15 }}
         text={"CONTACT US"}
       />

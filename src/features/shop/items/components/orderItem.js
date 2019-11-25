@@ -1,4 +1,5 @@
 import React from "react";
+import MyLink from "../../../../tools/myLink";
 
 const OrderPage = () => {
   return (
@@ -12,11 +13,10 @@ const OrderPage = () => {
           lining.
         </span>
         <MyLink>More Information</MyLink>
-        <select class="form-control">
+        <select className="form-control">
           <option>White</option>
           <option>Black</option>
           <option>Gray</option>
-
         </select>
       </form>
         </div>

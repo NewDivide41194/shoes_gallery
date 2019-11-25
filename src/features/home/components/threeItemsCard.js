@@ -13,7 +13,8 @@ const ThreeItemsCard = props => {
               src={process.env.PUBLIC_URL + v.imgURL[0]}
               alt="ThreeItems"
             />
-          <span className='card-title'>{v.brand}</span><br/>
+          <span>{v.price}</span><br/>
+
           <MyLink to={`/${RoutePath.Item}/${v.id}`} text={'View Detail'} id={v.id} />
         </div>
       ))}

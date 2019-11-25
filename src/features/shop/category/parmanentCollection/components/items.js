@@ -94,7 +94,7 @@ const ItemCards = props => {
                       <MyButton
                         type={"submit"}
                         className="py-2"
-                        text={"Shop Now"}
+                        text={"View Detail"}
                         color={"primary"}
                       />
                     </td>

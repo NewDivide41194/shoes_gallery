@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { withMedia } from "react-media-query-hoc";
+import JSDATA from "../../../../../assets/itemData.json";
+
 
 import ThumbButton from "../../../../app/thumbButton";
 import * as Fonts from "../../../../../config/fontConfig";
 import { fsc } from "../../../../../assets/fontControlHelper";
-import MyButton from '../../../../../tools/myButton'
+import MyButton from "../../../../../tools/myButton";
 
 const MenItemCards = props => {
   const { media } = props;
@@ -39,13 +41,13 @@ const MenItemCards = props => {
         Our Latest Styles for Men :
       </span>
 
-      {media.mobile || (
+      {media.desktop ||media.largeDesktop||media.tablet? (
         <ThumbButton
           FunctionSmall={_handleSmallView}
           FunctionLarge={_handleLargeView}
         />
-      )}
-      {ForMenData.map((v, k) => (
+      ):null}
+      {JSDATA.map((v, k) => (
         <div
           className={`${
             LargeView ? "col-lg-6 col-md-6" : "col-lg-4 col-md-4"
@@ -56,7 +58,7 @@ const MenItemCards = props => {
           <div className="border-bottom pb-3">
             <div style={{ overflow: "hidden" }}>
               <img
-                src={process.env.PUBLIC_URL + v.imgURL}
+                src={process.env.PUBLIC_URL + v.imgURL[0]}
                 id={v.id}
                 className="card-img-top"
                 onMouseOver={_handleHover}
@@ -67,7 +69,8 @@ const MenItemCards = props => {
             </div>
 
             <div className="px-3 pt-3 border-top">
-              <span style={{ fontSize: 20, fontWeight: "bold" }}>{v.name}</span><br/>
+              <span style={{ fontSize: 20, fontWeight: "bold" }}>{v.name}</span>
+              <br />
               <span style={{ fontSize: 18 }}>{v.model}</span>
               <table className="w-100">
                 <tbody>
@@ -89,8 +92,8 @@ const MenItemCards = props => {
                     <td colSpan="3" className="pt-2">
                       <MyButton
                         type={"submit"}
-                        className='py-2'
-                        text={"Shop Now"}
+                        className="py-2"
+                        text={"View Detail"}
                         color={"primary"}
                       />
                     </td>
