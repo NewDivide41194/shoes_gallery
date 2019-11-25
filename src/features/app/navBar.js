@@ -10,12 +10,13 @@ import SideBar from "./sideBar";
 import * as Fonts from "../../config/fontConfig";
 
 const NavBar = props => {
-  const { media } = props;
+  const { media, history } = props;
+  console.log(history);
+  // const ActiveStyle = "#999999";
 
   useEffect(() => {
     window.onscroll = () => {
       const MyNav = document.getElementById("nav");
-
       if (
         document.body.scrollTop > 30 ||
         document.documentElement.scrollTop > 30
@@ -30,7 +31,6 @@ const NavBar = props => {
     };
   });
 
-  // const PathName=match.history.location.pathname
 
   return (
     <div
@@ -45,7 +45,7 @@ const NavBar = props => {
             fontSize: 30,
             fontStyle: "bold",
             fontFamily: Fonts.titleText,
-            color:Colors.textOragne,
+            color: Colors.textOragne
           }}
           id={"Home"}
           text={"E.M.D Footwears"}
@@ -55,29 +55,44 @@ const NavBar = props => {
           <span>
             <MyLink
               to={`/${RoutePath.Men}`}
-              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite
-            }}
+              style={{
+                fontSize: fsc(media, 18),
+                textShadow: "1px 1px 1px gray",
+                color: Colors.textWhite
+              }}
               className="px-3 py-2"
               id={"Men"}
               text={"MEN"}
             />
             <MyLink
               to={`/${RoutePath.Women}`}
-              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite  }}
+              style={{
+                fontSize: fsc(media, 18),
+                textShadow: "1px 1px 1px gray",
+                color: Colors.textWhite
+              }}
               className="px-3 py-2"
               id={"Women"}
               text={"WOMEN"}
             />
             <MyLink
               to={`/${RoutePath.PermanentCollection}`}
-              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite  }}
+              style={{
+                fontSize: fsc(media, 18),
+                textShadow: "1px 1px 1px gray",
+                color: Colors.textWhite
+              }}
               className="px-3 py-2"
               id={"Collection"}
               text={"PARMANENT COLLECTION"}
             />
             <MyLink
               to={`/${RoutePath.Contact}`}
-              style={{ fontSize: fsc(media, 18),textShadow: "1px 1px 1px gray", color:Colors.textWhite  }}
+              style={{
+                fontSize: fsc(media, 18),
+                textShadow: "1px 1px 1px gray",
+                color: Colors.textWhite
+              }}
               className="px-3 py-2"
               id={"Contact"}
               text={"CONTACT US"}
@@ -99,7 +114,7 @@ const SearchBar = () => {
         <input
           placeholder="Search Items"
           className="form-control float-right bg-transparent border"
-          style={{boxShadow: "none" }}
+          style={{ boxShadow: "none" }}
         />
 
         <i

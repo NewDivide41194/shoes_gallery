@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "brand": "Nike",
+    "model": "Black Sport",
+    "color": "Black",
+    "price": 285000,
+    "gen": "Male",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+      "images/shoes/men/adidas/blue/adidasBlue (1).jpg",
+      "images/shoes/men/adidas/blue/adidasBlue (2).jpg",
+      "images/shoes/men/adidas/blue/adidasBlue (3).jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "brand": "Nike",
+    "model": "Black Sport",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Male",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+      "images/shoes/men/adidas/pure/adidasPure (2).jpg",
+      "images/shoes/men/adidas/pure/adidasPure (2).jpg",
+      "images/shoes/men/adidas/pure/adidasPure (3).jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "Nike",
+    "model": "Black Sport",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Male",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+      "images/shoes/men/adidas/superstar/adidasSuperStar (3).jpg",
+      "images/shoes/men/adidas/superstar/adidasSuperStar (4).jpg",
+      "images/shoes/men/adidas/superstar/adidasSuperStar (1).jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "CONVERSE",
+    "model": "All Star",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Female",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+        "images/shoes/women/allstars/pink/1.jpg",
+        "images/shoes/women/allstars/pink/2.jpg",
+        "images/shoes/women/allstars/pink/4.jpg"
+      ]  },
+  {
+    "id": 5,
+    "brand": "CONVERSE",
+    "model": "All Star",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Female",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+        "images/shoes/women/allstars/red/1.jpg",
+        "images/shoes/women/allstars/red/2.jpg",
+        "images/shoes/women/allstars/red/4.jpg"
+      ] 
+  },
+  {
+    "id": 6,
+    "brand": "CONVERSE",
+    "model": "All Star",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Female",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+        "images/shoes/women/allstars/snow/1.jpg",
+        "images/shoes/women/allstars/snow/2.jpg",
+        "images/shoes/women/allstars/snow/3.jpg"
+      ]   },
+  {
+    "id": 7,
+    "brand": "Nike",
+    "model": "Air Max 270",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Female",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+        "images/shoes/women/nike/airMax270/1.jpg",
+        "images/shoes/women/nike/airMax270/2.jpg",
+        "images/shoes/women/nike/airMax270/3.jpg"
+      ]  },
+  {
+    "id": 8,
+    "brand": "Nike",
+    "model": "Joy Ride",
+    "color": "Black",
+    "price": 280000,
+    "gen": "Male",
+    "sizes": {
+      "size1": "EU 39",
+      "size2": "EU 40",
+      "size3": "EU 41",
+      "size4": "EU 42",
+      "size5": "EU 43",
+      "size6": "EU 44",
+      "size7": "EU 45",
+      "size8": "EU 46"
+    },
+    "imgURL": [
+        "images/shoes/men/nike/joyride/1.jpg",
+        "images/shoes/men/nike/joyride/2.jpg",
+        "images/shoes/men/nike/joyride/2.jpg"
+      ]   }
+  
+]
