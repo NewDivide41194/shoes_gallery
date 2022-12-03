@@ -68,7 +68,7 @@ const NavBar = props => {
               text={"MEN"}
               active
             />
-            <MyLink
+            {/* <MyLink
               to={`/${RoutePath.Women}`}
               style={{
                 fontSize: fsc(media, 18),
@@ -78,7 +78,7 @@ const NavBar = props => {
               className="px-3 py-2"
               id={"Women"}
               text={"WOMEN"}
-            />
+            /> */}
             <MyLink
               to={`/${RoutePath.PermanentCollection}`}
               style={{
